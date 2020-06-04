@@ -101,10 +101,9 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
             '#badc58',
             '#c7ecee',
           ];
-          const setColor =
-            placeholderColors[
-              Math.floor(Math.random() * placeholderColors.length)
-            ];
+          const setColor = placeholderColors[
+            Math.floor(Math.random() * placeholderColors.length)
+          ];
 
           return (
             <FeaturePost
@@ -129,7 +128,13 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
           <TagItem key={tag.fieldValue}>
             <span>#</span>
             <Link to={`/tags/${_.kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} <span>({tag.totalCount})</span>
+              {tag.fieldValue}
+              {' '}
+              <span>
+                (
+                {tag.totalCount}
+                )
+              </span>
             </Link>
           </TagItem>
         ))}
@@ -153,10 +158,9 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
                 '#badc58',
                 '#c7ecee',
               ];
-              const setColor =
-                placeholderColors[
-                  Math.floor(Math.random() * placeholderColors.length)
-                ];
+              const setColor = placeholderColors[
+                Math.floor(Math.random() * placeholderColors.length)
+              ];
 
               return (
                 <InstagramPhoto key={node.id}>
