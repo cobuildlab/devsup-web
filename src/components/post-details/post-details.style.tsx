@@ -246,7 +246,7 @@ export const PostDescription = styled.div`
   a {
     font-weight: 500;
     transition: 0.15s ease-in-out;
-    color: ${themeGet('primary', '#D10068')};
+    color: ${themeGet('colors.primary', '#D10068')};
   }
 `;
 

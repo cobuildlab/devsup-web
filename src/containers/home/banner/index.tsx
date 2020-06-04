@@ -1,7 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import FeaturePost from '../../../components/feature-post/feature-post';
-import { BannerWrapper, BannerInner, FeaturePosts, Title } from './style';
+import {
+  BannerWrapper, BannerInner, FeaturePosts, Title,
+} from './style';
 
 type BannerProps = {};
 
@@ -11,7 +13,7 @@ const Banner: React.FunctionComponent<BannerProps> = () => {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
         limit: 5
-        filter: { frontmatter: { tags: { eq: "featured" } } }
+        filter: { frontmatter: { tags: { eq: "Conventions" } } }
       ) {
         totalCount
         edges {
@@ -45,7 +47,7 @@ const Banner: React.FunctionComponent<BannerProps> = () => {
     <BannerWrapper>
       <BannerInner>
         <FeaturePosts>
-          <Title>Featured Posts</Title>
+          <Title>Fixed Post</Title>
           {Posts.map(({ node }: any) => {
             const title = node.frontmatter.title || node.fields.slug;
             // Random Placeholder Color
@@ -61,10 +63,9 @@ const Banner: React.FunctionComponent<BannerProps> = () => {
               '#badc58',
               '#c7ecee',
             ];
-            const setColor =
-              placeholderColors[
-                Math.floor(Math.random() * placeholderColors.length)
-              ];
+            const setColor = placeholderColors[
+              Math.floor(Math.random() * placeholderColors.length)
+            ];
 
             return (
               <FeaturePost

@@ -3,11 +3,6 @@ import { graphql, Link } from 'gatsby';
 import _ from 'lodash';
 import urljoin from 'url-join';
 import { DiscussionEmbed } from 'disqus-react';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import PostCard from '../components/post-card/post-card';
-import PostDetails from '../components/post-details/post-details';
-import Sidebar from '../containers/sidebar';
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -20,6 +15,11 @@ import {
   IoLogoPinterest,
   IoLogoReddit,
 } from 'react-icons/io';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import PostCard from '../components/post-card/post-card';
+import PostDetails from '../components/post-details/post-details';
+import Sidebar from '../containers/sidebar';
 import {
   BlogPostDetailsWrapper,
   RelatedPostWrapper,
@@ -36,9 +36,9 @@ import {
 const BlogPostTemplate = (props: any) => {
   const post = props.data.markdownRemark;
   const { edges } = props.data.allMarkdownRemark;
-  const title = post.frontmatter.title;
-  const slug = post.fields.slug;
-  const siteUrl = props.data.site.siteMetadata.siteUrl;
+  const { title } = post.frontmatter;
+  const { slug } = post.fields;
+  const { siteUrl } = props.data.site.siteMetadata;
   const shareUrl = urljoin(siteUrl, slug);
 
   const disqusConfig = {
@@ -123,10 +123,9 @@ const BlogPostTemplate = (props: any) => {
                 '#badc58',
                 '#c7ecee',
               ];
-              const setColor =
-                placeholderColors[
-                  Math.floor(Math.random() * placeholderColors.length)
-                ];
+              const setColor = placeholderColors[
+                Math.floor(Math.random() * placeholderColors.length)
+              ];
               return (
                 <RelatedPostItem key={node.fields.slug}>
                   <PostCard
