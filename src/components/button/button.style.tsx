@@ -11,7 +11,7 @@ const ButtonStyle = styled('button')<ButtonStyleProps>`
   align-items: center;
   justify-content: center;
   color: ${themeGet('colors.white', '#fff')};
-  background-color: ${themeGet('colors.black', '#292929')};
+  background-color: ${themeGet('colors.primary', '#E76C29')};
   height: ${themeGet('heights.2', '44')}px;
   width: ${(props) => (props.fullwidth ? '100%' : 'auto')};
   font-family: ${themeGet('fontFamily.0', "'Fira Sans', sans-serif")};

@@ -103,7 +103,7 @@ export const NewsletterInputWrapper = styled.form`
     .inner-wrap {
       input {
         border-width: 0 0 1px 0;
-        border-color: ${themeGet('colors.textColor', '#292929')};
+        border-color: ${themeGet('colors.primary', '#292929')};
         background: transparent;
       }
     }

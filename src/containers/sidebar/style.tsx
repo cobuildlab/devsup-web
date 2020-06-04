@@ -95,7 +95,7 @@ export const TagItem = styled.div`
   }
 
   > span {
-    color: ${themeGet('primary', '#D10068')};
+    color: ${themeGet('colors.primary', '#E76C29')};
     margin-right: 15px;
   }
 
@@ -111,7 +111,7 @@ export const TagItem = styled.div`
       margin-left: 10px;
     }
     &:hover {
-      color: ${themeGet('primary', '#D10068')};
+      color: ${themeGet('colors.primaryHover', '#D05B1B')};
     }
   }
 `;
