@@ -51,7 +51,7 @@ export const PostTitle = styled.h1`
     color: ${themeGet('colors.textColor', '#292929')};
     transition: 0.15s ease-in-out;
     &:hover {
-      color: ${themeGet('primary', '#D10068')};
+      color: ${themeGet('colors.primaryHover', '#D10068')};
     }
   }
 `;
