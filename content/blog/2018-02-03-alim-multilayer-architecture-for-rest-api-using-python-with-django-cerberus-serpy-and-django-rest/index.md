@@ -1,6 +1,5 @@
 ---
-id: 775
-title: SLIM architecture for a REST API using Python with Django, Cerberus, Serpy and Django Rest Framework
+title: "SLIM architecture for a REST API using Python with Django, Cerberus, Serpy and Django Rest Framework"
 date: '2018-02-03'
 tags: ["Python", "Django", "REST API"]
 template: development-post

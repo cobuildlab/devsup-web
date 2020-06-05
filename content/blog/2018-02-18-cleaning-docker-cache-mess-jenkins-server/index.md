@@ -1,6 +1,5 @@
 ---
-id: 853
-title: Cleaning the docker cache (mess) in my Jenkins server
+title: "Cleaning the docker cache (mess) in my Jenkins server"
 date: '2018-02-18'
 tags: ["docker"]
 cover: "../../assets/default-blog/default-post.jpg"

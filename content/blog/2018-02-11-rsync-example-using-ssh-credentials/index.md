@@ -1,5 +1,5 @@
 ---
-title: Rsync example using SSH credentials
+title: "Rsync example using SSH credentials"
 date: '2018-02-11'
 tags: ["credentials", "SSH"]
 cover: "../../assets/default-blog/default-post.jpg"

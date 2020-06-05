@@ -1,5 +1,5 @@
 ---
-title: Connecting My Flask Application with Twilio to send SMS
+title: "Connecting My Flask Application with Twilio to send SMS"
 date: '2019-04-08'
 tags: ["Connecting", "Application", "Twilio"]
 cover: "../../assets/default-blog/default-post.jpg"

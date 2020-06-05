@@ -1,5 +1,5 @@
 ---
-title: Create a User with SSH access in ubuntu 16.04
+title: "Create a User with SSH access in ubuntu 16.04"
 date: '2018-07-17'
 tags: ["SSH", "ubuntu"]
 cover: "../../assets/default-blog/default-post.jpg"

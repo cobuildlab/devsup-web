@@ -1,5 +1,5 @@
 ---
-title: Swift Playgrounds
+title: "Swift Playgrounds"
 date: '2018-04-03'
 tags: ["Swift"]
 cover: "../../assets/default-blog/default-post.jpg"

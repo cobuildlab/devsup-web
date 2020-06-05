@@ -1,6 +1,5 @@
 ---
-id: 849
-title: Finding the Biggest files in my server
+title: "Finding the Biggest files in my server"
 date: '2018-02-18'
 tags: ["server", "files"]
 cover: "../../assets/default-blog/default-post.jpg"

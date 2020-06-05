@@ -1,5 +1,5 @@
 ---
-title: Socket.io with token authentication
+title: "Socket.io with token authentication"
 date: 2018-03-21T14:27:15+00:00
 tags: ["Socket.io", "Javascript", "Authentication", "Token"]
 cover: "../../assets/default-blog/default-post.jpg"

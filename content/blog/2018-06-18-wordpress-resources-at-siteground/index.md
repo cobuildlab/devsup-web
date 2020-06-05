@@ -1,5 +1,5 @@
 ---
-title: WordPress Resources at SiteGround
+title: "WordPress Resources at SiteGround"
 date: '2018-06-18'
 tags: ["WordPress", "wordPress"]
 cover: "../../assets/default-blog/default-post.jpg"

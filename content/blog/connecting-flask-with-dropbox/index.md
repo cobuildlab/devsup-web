@@ -1,5 +1,5 @@
 ---
-title: Connecting My Flask Application with Dropbox
+title: "Connecting My Flask Application with Dropbox"
 date: '2019-05-06'
 tags: ["Application", "Dropbox"]
 cover: "../../assets/default-blog/default-post.jpg"

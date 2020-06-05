@@ -1,6 +1,5 @@
 ---
-id: 833
-title: Write a more readable code with Express.js
+title: "Write a more readable code with Express.js"
 date: 2018-02-15T19:58:35+00:00
 tags: ["Express"]
 cover: "../../assets/default-blog/default-post.jpg"

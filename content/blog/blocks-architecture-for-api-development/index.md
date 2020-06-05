@@ -1,5 +1,5 @@
 ---
-title: BLOCKS architecture for API Development
+title: "BLOCKS architecture for API Development"
 date: '2018-09-29'
 tags: ["architecture". "Architecture", "API", "Development"]
 cover: "../../assets/default-blog/default-post.jpg"

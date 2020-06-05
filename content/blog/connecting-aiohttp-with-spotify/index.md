@@ -1,5 +1,5 @@
 ---
-title: Connecting AIOHTTP with Spotify
+title: "Connecting AIOHTTP with Spotify"
 date: '2019-07-01'
 tags: ["Spotify"]
 cover: "../../assets/default-blog/default-post.jpg"

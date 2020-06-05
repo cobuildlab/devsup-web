@@ -1,5 +1,5 @@
 ---
-title: Authentication Syndication with React and Auth0
+title: "Authentication Syndication with React and Auth0"
 date: '2019-05-13'
 tags: ["Authentication", "authentication", "React", "Auth0"]
 cover: "../../assets/default-blog/default-post.jpg"

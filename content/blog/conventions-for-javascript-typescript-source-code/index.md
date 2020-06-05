@@ -1,5 +1,5 @@
 ---
-title: Conventions for Javascript / Typescript source code
+title: "Conventions for Javascript / Typescript source code"
 date: '2021-12-31'
 tags: ['javascript', "Conventions", "conventions"]
 description: This document aims to reduce the friction between patterns and ways of doing common tasks during the development of Javascript applications.

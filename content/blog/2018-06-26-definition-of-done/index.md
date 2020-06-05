@@ -1,6 +1,5 @@
 ---
-id: 1260
-title: Definition of Done
+title: "Definition of Done"
 date: '2018-06-26'
 tags: ["Scrum Framework"]
 cover: "../../assets/default-blog/default-post.jpg"

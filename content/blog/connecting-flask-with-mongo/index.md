@@ -1,5 +1,5 @@
 ---
-title: Connecting My Flask Application with Mongo DB
+title: "Connecting My Flask Application with Mongo DB"
 date: '2019-03-11'
 tags:  ["Mongo DB", "Application", "Connecting"]
 cover: "../../assets/default-blog/default-post.jpg"

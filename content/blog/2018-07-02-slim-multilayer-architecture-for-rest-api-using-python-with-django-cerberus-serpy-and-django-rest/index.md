@@ -1,5 +1,5 @@
 ---
-title: SLIM Multilayer Architecture for REST API using Python with Django, Cerberus, Serpy and Django Rest
+title: "SLIM Multilayer Architecture for REST API using Python with Django, Cerberus, Serpy and Django Rest"
 date: '2018-07-02T17'
 tags: ["Architecture", "REST API", "Python"]
 cover: "../../assets/default-blog/default-post.jpg"

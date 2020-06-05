@@ -1,5 +1,5 @@
 ---
-title: Connecting My Flask Application with Sendgrid
+title: "Connecting My Flask Application with Sendgrid"
 date: '2019-03-25'
 tags: ["Sendgrid", "Connecting", "Application"]
 cover: "../../assets/default-blog/default-post.jpg"
