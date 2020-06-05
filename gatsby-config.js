@@ -1,8 +1,15 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: 'Cobuild Lab Development Blog',
+    author: 'cobuildlab',
+    about: `Breakfast procuring no end happiness allowance assurance frank. Met simplicity nor difficulty unreserved who. Entreaties mr conviction dissimilar me
+    astonished estimating cultivated.`, // TODO update this
+    description: 'Software development in Miami, Florida',
+    siteUrl: 'https://storyhub-personal-tarex.redq.now.sh', // TODO update this
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
