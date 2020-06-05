@@ -12,6 +12,12 @@ module.exports = {
     siteUrl: 'https://storyhub-personal-tarex.redq.now.sh', // TODO update this
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-styled-components',
+      options: {
+        minify: false, // Breaks styles if not set to false
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
