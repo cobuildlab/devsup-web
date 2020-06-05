@@ -75,6 +75,7 @@ export const PostTitle = styled.h2`
 `;
 
 export const Excerpt = styled.p`
+  font-family: ${themeGet('fontFamily.0')};
   font-size: ${themeGet('fontSizes.3', '15')}px;
   color: ${themeGet('textColor', '#292929')};
   font-weight: 400;
@@ -90,7 +91,7 @@ export const PostTags = styled.div`
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 15px;
-
+  font-family: ${themeGet('fontFamily.0')};
   a {
     display: block;
     margin-right: 30px;

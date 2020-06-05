@@ -70,6 +70,7 @@ export const PostTags = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  font-family: ${themeGet('fontFamily.0')};
   @media (max-width: 575px) {
     display: none;
   }

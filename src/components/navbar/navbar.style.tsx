@@ -65,6 +65,7 @@ export const MenuItem = styled.li`
     font-size: ${themeGet('fontSizes.3', '15')}px;
     line-height: ${themeGet('lineHeights.normal', '1')};
     font-weight: ${themeGet('fontWeights.3', '400')};
+    font-family: ${themeGet('fontFamily.0')};
     color: ${themeGet('colors.lightTextColor', '#757575')};
     transition: 0.15s ease-in-out;
 

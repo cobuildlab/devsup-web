@@ -255,7 +255,7 @@ export const PostTags = styled.div`
   flex-wrap: wrap;
   align-items: center;
   margin-top: 60px;
-
+  font-family: ${themeGet('fontFamily.0')};
   a {
     display: block;
     margin-right: 30px;

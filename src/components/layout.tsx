@@ -7,7 +7,7 @@ import Newsletter from './newsletter/newsletter';
 import Footer from './footer/footer';
 import ScrollUpButton from './scroll-up-button/scroll-up-button';
 import ResetCss from './reset-css';
-import { theme } from '../theme';
+import GlobalStyle, { theme } from '../theme';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -16,6 +16,7 @@ type LayoutProps = {
 const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
+      <GlobalStyle />
       <ResetCss />
       <Sticky top={0} innerZ={9999} activeClass="nav-sticky">
         <Navbar />
