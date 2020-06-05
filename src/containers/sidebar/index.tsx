@@ -169,7 +169,7 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
                     target="_blank"
                   >
                     <Img
-                      fluid={node.localFile.childImageSharp.fluid}
+                      fluid={node.localFile ? node.localFile.childImageSharp.fluid : ' '}
                       alt="Instagram Photo"
                       backgroundColor={setColor}
                     />
