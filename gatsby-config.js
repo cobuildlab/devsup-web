@@ -18,6 +18,13 @@ module.exports = {
         minify: false, // Breaks styles if not set to false
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages/blog`,
+        name: 'blog',
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
