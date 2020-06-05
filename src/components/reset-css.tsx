@@ -47,11 +47,9 @@ const ResetCSS = createGlobalStyle`
   h5,
   h6{
     margin-top: 0;
-    font-family: 'Poppins',sans-serif;
   }
 
   body {
-    font-family: 'Fira Sans',sans-serif;
     margin: 0;
     padding: 0;
     font-size: 15px;
@@ -64,7 +62,6 @@ const ResetCSS = createGlobalStyle`
     margin: 0 0 1.7em 0;
   }
   
-  input, textarea, select, button{font-family: 'Fira Sans',sans-serif;}
 
   ul,ol {
     margin: 0;
@@ -81,7 +78,6 @@ const ResetCSS = createGlobalStyle`
   }
 
   blockquote{
-    font-family: 'Poppins',sans-serif;
     font-weight: 500;
   }
 
