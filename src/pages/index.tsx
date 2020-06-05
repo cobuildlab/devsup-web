@@ -6,13 +6,9 @@ import SEO from '../components/seo';
 
 const HomePage = (props: any) => {
   const { data } = props;
-
   return (
     <Layout>
-      <SEO
-        title="Agency Blog Modern"
-        description={data.site.siteMetadata.description}
-      />
+      <SEO title="Blog" description={data.site.siteMetadata.description} />
       <PersonalBlog />
     </Layout>
   );
