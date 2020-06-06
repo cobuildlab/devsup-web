@@ -21,14 +21,14 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/src/blog`,
         name: 'blog',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/assets`,
+        path: `${__dirname}/src/assets`,
         name: 'assets',
       },
     },
@@ -87,7 +87,7 @@ module.exports = {
         // trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    {
+    /* {
       resolve: 'gatsby-plugin-feed',
     },
     {
@@ -99,12 +99,12 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'content/assets/favicon.png',
+        icon: 'src/assets/favicon.png',
       },
     },
     {
       resolve: 'gatsby-plugin-offline',
-    },
+    }, */
     {
       resolve: 'gatsby-plugin-react-helmet',
     },
@@ -120,7 +120,7 @@ module.exports = {
         endpoint: process.env.MAIL_CHIMP_END_POINT,
       },
     },
-    {
+    /* {
       resolve: 'gatsby-source-instagram',
       // add your instagram username, access_token and id below
       options: {
@@ -128,21 +128,6 @@ module.exports = {
         // access_token: ,
         // instagram_id: ,
       },
-    },
-    {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
-      options: {
-        fonts: [
-          {
-            family: 'Poppins',
-            variants: ['300', '400', '500', '600', '700'],
-          },
-          {
-            family: 'Fira Sans',
-            variants: ['100', '300', '400', '500', '600', '700'],
-          },
-        ],
-      },
-    },
+    }, */
   ],
 };
