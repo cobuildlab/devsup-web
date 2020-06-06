@@ -103,8 +103,20 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      options: {
+        fonts: [
+          {
+            family: 'Poppins',
+            variants: ['300', '400', '500', '600', '700'],
+          },
+          {
+            family: 'Fira Sans',
+            variants: ['100', '300', '400', '500', '600', '700'],
+          },
+        ],
+      },
+    },
   ],
-}
+};
