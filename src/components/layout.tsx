@@ -1,5 +1,4 @@
 import React from 'react';
-import Sticky from 'react-stickynode';
 import { ThemeProvider } from 'styled-components';
 import ScrollToTop from 'react-scroll-up';
 import Navbar from './navbar/navbar';
@@ -18,12 +17,8 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => (
     <>
       <GlobalStyle />
       <ResetCss />
-      <Sticky top={0} innerZ={9999} activeClass="nav-sticky">
-        <Navbar />
-      </Sticky>
-
+      <Navbar />
       {children}
-
       <Newsletter />
       <Footer>
         Copyright &copy;
