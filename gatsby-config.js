@@ -21,14 +21,14 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/src/blog`,
         name: 'blog',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/assets`,
+        path: `${__dirname}/src/assets`,
         name: 'assets',
       },
     },
@@ -99,7 +99,7 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'content/assets/favicon.png',
+        icon: 'src/assets/favicon.png',
       },
     },
     {
@@ -127,21 +127,6 @@ module.exports = {
         // username: ,
         // access_token: ,
         // instagram_id: ,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
-      options: {
-        fonts: [
-          {
-            family: 'Poppins',
-            variants: ['300', '400', '500', '600', '700'],
-          },
-          {
-            family: 'Fira Sans',
-            variants: ['100', '300', '400', '500', '600', '700'],
-          },
-        ],
       },
     },
   ],
