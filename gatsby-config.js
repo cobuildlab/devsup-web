@@ -87,7 +87,7 @@ module.exports = {
         // trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    {
+    /* {
       resolve: 'gatsby-plugin-feed',
     },
     {
@@ -104,7 +104,7 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-offline',
-    },
+    }, */
     {
       resolve: 'gatsby-plugin-react-helmet',
     },
@@ -120,7 +120,7 @@ module.exports = {
         endpoint: process.env.MAIL_CHIMP_END_POINT,
       },
     },
-    {
+    /* {
       resolve: 'gatsby-source-instagram',
       // add your instagram username, access_token and id below
       options: {
@@ -128,6 +128,6 @@ module.exports = {
         // access_token: ,
         // instagram_id: ,
       },
-    },
+    }, */
   ],
 };
