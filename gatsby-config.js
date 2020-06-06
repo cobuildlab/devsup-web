@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages/blog`,
+        path: `${__dirname}/src/blog`,
         name: 'blog',
       },
     },
@@ -87,6 +87,24 @@ module.exports = {
         // trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
+    /* {
+      resolve: 'gatsby-plugin-feed',
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'StoryHub - Personal Blog',
+        short_name: 'StoryHub',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/assets/favicon.png',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+    }, */
     {
       resolve: 'gatsby-plugin-react-helmet',
     },
@@ -102,27 +120,14 @@ module.exports = {
         endpoint: process.env.MAIL_CHIMP_END_POINT,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
+    /* {
+      resolve: 'gatsby-source-instagram',
+      // add your instagram username, access_token and id below
       options: {
-        name: `images`,
-        path: `${__dirname}/src/assets`,
+        // username: ,
+        // access_token: ,
+        // instagram_id: ,
       },
-    },
-    {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
-      options: {
-        fonts: [
-          {
-            family: 'Poppins',
-            variants: ['300', '400', '500', '600', '700'],
-          },
-          {
-            family: 'Fira Sans',
-            variants: ['100', '300', '400', '500', '600', '700'],
-          },
-        ],
-      },
-    },
+    }, */
   ],
 };
