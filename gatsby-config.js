@@ -97,6 +97,12 @@ module.exports = {
       resolve: 'gatsby-plugin-lodash',
     },
     {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: process.env.MAIL_CHIMP_END_POINT,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
