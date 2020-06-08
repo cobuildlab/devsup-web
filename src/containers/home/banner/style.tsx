@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import BannerBG from '../../../images/banner-bg.jpg';
+import BannerBG from '../../../assets/background.png';
 import { themeGet } from '@styled-system/theme-get';
 
 export const BannerWrapper = styled.div`

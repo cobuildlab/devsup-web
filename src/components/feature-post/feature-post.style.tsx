@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 interface PropsTitle {
-  isColor?: string | undefined | null
+  isColor?: boolean | undefined | null
 }
 
 export const FeaturedPostWrapper = styled.div`

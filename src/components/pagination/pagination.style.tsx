@@ -6,7 +6,7 @@ export const PaginationWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: .5rem;
-  background: #f3f3f3;
+  background: #383a4c;
   border-radius: 5px;
   box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
 `;
@@ -16,9 +16,9 @@ export const PrevPage = styled.div`
   a {
     width: 32px;
     height: 32px;
-    color: ${themeGet('colors.textColor', '#292929')};
+    color: #fff;
     border-radius: 50%;
-    background-color: #f3f3f3;
+    background-color: #383a4c;
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@ export const NextPage = styled.div`
     height: 32px;
     color: ${themeGet('colors.textColor', '#292929')};
     border-radius: 50%;
-    background-color: #f3f3f3;
+    background-color: #383a4c;
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -57,4 +57,6 @@ export const NextPage = styled.div`
   }
 `;
 
-export const PageNumber = styled.div``;
+export const PageNumber = styled.div`
+  color: ${themeGet('colors.textColor', '#292929')};
+`;

@@ -11,11 +11,14 @@ interface SizesProps {
   }
 }
 
+export const BlogPostBackground = styled.div`
+  background-color: ${themeGet('colors.secondary', '#292929')};
+`;
+
 export const BlogPostsWrapper = styled.div`
   margin: 0 auto;
   padding-top: 120px;
   position: relative;
-
   @media (min-width: 990px) {
     width: 900px;
   }

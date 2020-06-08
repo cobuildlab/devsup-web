@@ -31,6 +31,7 @@ import {
   PostTags,
   BlogPostComment,
   BlogDetailsContent,
+  
 } from './templates.style';
 
 const BlogPostTemplate = (props: any) => {
