@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { IoIosSearch, IoIosClose } from 'react-icons/io';
 import { DrawerProvider } from '../drawer/drawer-context';
-import Menu from './menu';
-import MobileMenu from './mobile-menu';
+// import Menu from './menu';
+// import MobileMenu from './mobile-menu';
 import SearchContainer from '../../containers/search/search';
 import HeaderWrapper, {
   NavbarWrapper,
@@ -14,14 +14,13 @@ import HeaderWrapper, {
   SearchCloseButton,
   NavSearchFromWrapper,
 } from './navbar.style';
-import LogoImage from '../../images/cobuild-logo.png';
 
 type NavbarProps = {
   className?: string;
 };
 
-const MenuItems = [
-  /* {
+ /* const MenuItems = [
+ {
     label: 'Home',
     url: '/',
   },
@@ -36,8 +35,8 @@ const MenuItems = [
   {
     label: '404 Page',
     url: '/404',
-  }, */
-];
+  }, 
+];*/
 
 const Navbar: React.FunctionComponent<NavbarProps> = ({
   className,

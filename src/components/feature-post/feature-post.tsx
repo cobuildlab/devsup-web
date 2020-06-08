@@ -19,7 +19,7 @@ interface FeaturedPostProps {
   className?: string;
   imageType?: 'fixed' | 'fluid';
   placeholderBG?: string;
-  isColor?: string | undefined | null,
+  isColor?: boolean | undefined | null,
 }
 
 const FeaturedPost: React.FunctionComponent<FeaturedPostProps> = ({

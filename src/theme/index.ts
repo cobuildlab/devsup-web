@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import colors from './colors';
-import font from '../../content/assets/fonts/JetBrainsMono-Medium.ttf';
+import font from '../assets/fonts/JetBrainsMono-Medium.ttf';
 
 export const theme = {
   breakpoints: [576, 768, 991, 1220],
