@@ -5,6 +5,10 @@ export const PaginationWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: .5rem;
+  background: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
 `;
 
 export const PrevPage = styled.div`

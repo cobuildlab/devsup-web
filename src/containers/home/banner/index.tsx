@@ -69,6 +69,7 @@ const Banner: React.FunctionComponent<BannerProps> = () => {
 
             return (
               <FeaturePost
+                isColor
                 key={node.fields.slug}
                 title={title}
                 image={

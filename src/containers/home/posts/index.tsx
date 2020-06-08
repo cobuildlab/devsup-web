@@ -59,13 +59,12 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
             '#badc58',
             '#c7ecee',
           ];
-          const setColor =
-            placeholderColors[
-              Math.floor(Math.random() * placeholderColors.length)
-            ];
+          const setColor = placeholderColors[
+            Math.floor(Math.random() * placeholderColors.length)
+          ];
 
           return (
-            <PostGrid key={node.fields.slug}>
+            <PostGrid isSize={{ mobile: 12, desktop: 4 }} key={node.fields.slug}>
               <PostCardModern
                 key={node.fields.slug}
                 title={title}

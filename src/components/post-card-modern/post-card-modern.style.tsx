@@ -75,8 +75,9 @@ export const PostTitle = styled.h2`
 `;
 
 export const Excerpt = styled.p`
+  font-family: ${themeGet('fontFamily.0')};
   font-size: ${themeGet('fontSizes.3', '15')}px;
-  color: ${themeGet('textColor', '#292929')};
+  color: ${themeGet('colors.textColor', '#292929')};
   font-weight: 400;
   line-height: 2;
   margin-bottom: 0;
@@ -90,13 +91,13 @@ export const PostTags = styled.div`
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 15px;
-
+  font-family: ${themeGet('fontFamily.0')};
   a {
     display: block;
     margin-right: 30px;
     font-size: 14px;
     font-weight: 400;
-    color: ${themeGet('primary', '#E76C29')};
+    color: ${themeGet('colors.primary', '#E76C29')};
     @media (max-width: 990px) {
       font-size: 13px;
       margin-right: 25px;

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useCallback, useState } from 'react';
 import { Formik, FormikProps, Form } from 'formik';
 import * as Yup from 'yup';
 import Input from '../../components/input/input';
@@ -10,29 +10,55 @@ import {
   InputGroup,
 } from './style';
 
+
 interface MyFormValues {
-  firstName: string;
+  name: string;
   email: string;
   message: string;
 }
 
 const SignupSchema = Yup.object().shape({
-  firstName: Yup.string().required('Required'),
+  name: Yup.string().required('Required'),
   email: Yup.string().email('Invalid email').required('Required'),
   message: Yup.string().required('Required'),
 });
 
 const Contact: React.SFC<{}> = () => {
+  const [isLoading, setLoading] = useState<boolean>(false);
+
+  const onSubmit = useCallback(
+    async (values: MyFormValues, actions: any) => {
+      setLoading(true);
+
+      const data = {
+        ...values,
+        landing: 'Blog Contact Form',
+      };
+
+      const settings = {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      };
+      try {
+        if (process.env.CONTACT_FORM_API) {
+          await fetch(process.env.CONTACT_FORM_API, settings);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+      setLoading((state: boolean) => !state);
+      actions.setSubmitting(false);
+    }, [],
+  );
+
   return (
     <Formik
-      initialValues={{ firstName: '', email: '', message: '' }}
-      onSubmit={(values: MyFormValues, actions: any) => {
-        setTimeout(() => {
-          console.log({ values, actions });
-          alert(JSON.stringify(values, null, 2));
-          actions.setSubmitting(false);
-        }, 700);
-      }}
+      initialValues={{ name: '', email: '', message: '' }}
+      onSubmit={onSubmit}
       validationSchema={SignupSchema}
       render={({
         handleChange,
@@ -40,7 +66,6 @@ const Contact: React.SFC<{}> = () => {
         errors,
         handleBlur,
         touched,
-        isSubmitting,
       }: FormikProps<MyFormValues>) => (
         <>
           <Form>
@@ -58,14 +83,14 @@ const Contact: React.SFC<{}> = () => {
                 <InputGroup>
                   <Input
                     type="text"
-                    name="firstName"
-                    value={`${values.firstName}`}
+                    name="name"
+                    value={`${values.name}`}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     label="Name"
                     notification={`${
-                      errors.firstName && touched.firstName
-                        ? errors.firstName
+                      errors.name && touched.name
+                        ? errors.name
                         : ''
                     }`}
                   />
@@ -89,13 +114,13 @@ const Contact: React.SFC<{}> = () => {
                   onBlur={handleBlur}
                   label="Message"
                   notification={
-                    errors.message && touched.message ? errors.message : ''
-                  }
+                      errors.message && touched.message ? errors.message : ''
+                    }
                 />
                 <Button
                   title="Submit"
                   type="submit"
-                  isLoading={isSubmitting ? true : false}
+                  isLoading={isLoading}
                   loader="Submitting.."
                 />
               </ContactFromWrapper>

@@ -70,6 +70,7 @@ export const PostTags = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  font-family: ${themeGet('fontFamily.0')};
   @media (max-width: 575px) {
     display: none;
   }
@@ -80,7 +81,7 @@ export const PostTags = styled.div`
     margin-left: 30px;
     font-size: 14px;
     font-weight: 400;
-    color: ${themeGet('primary', '#E76C29')};
+    color: ${themeGet('colors.primary', '#E76C29')};
     @media (max-width: 990px) {
       font-size: 13px;
       margin-left: 25px;

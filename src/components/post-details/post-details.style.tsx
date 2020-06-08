@@ -39,7 +39,7 @@ export const PostDetailsWrapper = styled.div`
 export const PostTitle = styled.h1`
   font-size: 30px;
   font-weight: 700;
-  color: ${themeGet('colors.textColor', '#292929')};
+  color: ${themeGet('colors.secondary', '#292929')};
   line-height: 1.53;
   margin-bottom: 10px;
   @media (max-width: 1200px) {
@@ -133,6 +133,7 @@ export const PostDescription = styled.div`
   h6 {
     font-weight: 500;
     margin-bottom: 0.75em;
+    color: ${themeGet('colors.secondary', '#292929')};
   }
 
   h1 {
@@ -255,7 +256,7 @@ export const PostTags = styled.div`
   flex-wrap: wrap;
   align-items: center;
   margin-top: 60px;
-
+  font-family: ${themeGet('fontFamily.0')};
   a {
     display: block;
     margin-right: 30px;

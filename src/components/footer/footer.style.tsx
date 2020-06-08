@@ -8,7 +8,7 @@ const FooterWrapper = styled.footer`
   font-size: ${themeGet('fontSizes.3', '15')}px;
   padding: 30px 15px;
   text-align: center;
-  border-top: 1px solid #f3f3f3;
+  background-color: ${themeGet('colors.secondary', '#292929')};
   @media (max-width: 575px) {
     padding: 22px 15px;
   }

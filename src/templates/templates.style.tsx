@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
+import getColumnSize from '../utils/get-column-size';
+
+
+interface SizesProps {
+  isSize: {
+    mobile?: number;
+    desktop?: number;
+    tablet?: number;
+  }
+}
 
 export const BlogPostsWrapper = styled.div`
   margin: 0 auto;
@@ -34,7 +44,7 @@ export const BlogPostsWrapper = styled.div`
 `;
 
 export const RelatedPostWrapper = styled.div`
-  margin: 0 auto;
+  margin: 120px auto;
   @media (min-width: 990px) {
     width: 900px;
   }
@@ -53,7 +63,7 @@ export const RelatedPostWrapper = styled.div`
 `;
 
 export const RelatedPostTitle = styled.h2`
-  color: ${themeGet('colors.textColor', '#292929')};
+  color: ${themeGet('colors.secondary', '#292929')};
   font-size: 16px;
   font-weight: 500;
   font-family: ${themeGet('fontFamily.0', "'Fira Sans',sans-serif")};
@@ -350,17 +360,17 @@ export const PostRow = styled.div`
   }
 `;
 
-export const PostGrid = styled.div`
-  flex: 0 0 50%;
-  max-width: 50%;
+export const PostGrid = styled.div<SizesProps>`
+  flex: 0 0 ${({ isSize }) => (isSize && isSize.desktop ? getColumnSize({ size: isSize.desktop }) : 'auto')};
+  max-width: ${({ isSize }) => (isSize && isSize.desktop ? getColumnSize({ size: isSize.desktop }) : 'auto')};
   padding: 0 20px;
   margin-bottom: 90px;
   @media (max-width: 990px) {
     margin-bottom: 70px;
   }
   @media (max-width: 767px) {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 ${({ isSize }) => (isSize && isSize.mobile ? getColumnSize({ size: isSize.mobile }) : 'auto')};
+    max-width: ${({ isSize }) => (isSize && isSize.mobile ? getColumnSize({ size: isSize.mobile }) : 'auto')};
   }
   @media (max-width: 575px) {
     margin-bottom: 50px;
