@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
+interface PropsTitle {
+  isColor?: string | undefined | null
+}
+
 export const FeaturedPostWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -33,7 +37,7 @@ export const PostDetails = styled.div`
   flex-grow: 1;
 `;
 
-export const PostTitle = styled.h1`
+export const PostTitle = styled.h1<PropsTitle>`
   font-size: 18px;
   font-weight: 700;
 
@@ -48,7 +52,7 @@ export const PostTitle = styled.h1`
     font-size: 14px;
   }
   a {
-    color: ${themeGet('colors.textColor', '#292929')};
+    color: ${({ isColor }) => isColor? themeGet('colors.textColor', '#292929') : themeGet('colors.secondary', '#292929') };
     transition: 0.15s ease-in-out;
     &:hover {
       color: ${themeGet('colors.primaryHover', '#D10068')};
@@ -80,7 +84,7 @@ export const PostTags = styled.div`
     margin-right: 30px;
     font-size: 13px;
     font-weight: 400;
-    color: ${themeGet('primary', '#E76C29')};
+    color: ${themeGet('colors.primary', '#E76C29')};
     @media (max-width: 990px) {
       font-size: 13px;
       margin-right: 25px;

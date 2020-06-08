@@ -1,6 +1,6 @@
 ---
 title: "Connect to 8base and Make a Query"
-date: '2019-22-16'
+date: 2019-22-16T01:00:00+00:00
 tags: ["Query", "8Base"]
 cover: "../../assets/default-blog/default-post.jpg"
 ---

@@ -103,7 +103,7 @@ export const TagItem = styled.div`
     display: flex;
     align-items: center;
     text-transform: capitalize;
-    color: ${themeGet('colors.textColor', '#292929')};
+    color: ${themeGet('colors.secondary', '#292929')};
     padding: 5px 0;
     transition: 0.15s ease-in-out;
 

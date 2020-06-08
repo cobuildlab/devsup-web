@@ -19,6 +19,7 @@ interface FeaturedPostProps {
   className?: string;
   imageType?: 'fixed' | 'fluid';
   placeholderBG?: string;
+  isColor?: string | undefined | null,
 }
 
 const FeaturedPost: React.FunctionComponent<FeaturedPostProps> = ({
@@ -29,6 +30,7 @@ const FeaturedPost: React.FunctionComponent<FeaturedPostProps> = ({
   className,
   imageType,
   placeholderBG,
+  isColor,
   ...props
 }) => {
   // Add all classs to an array
@@ -62,7 +64,7 @@ const FeaturedPost: React.FunctionComponent<FeaturedPostProps> = ({
       )}
 
       <PostDetails>
-        <PostTitle className="post_title">
+        <PostTitle  isColor={isColor} className="post_title">
           <Link to={url}>{title}</Link>
         </PostTitle>
         <PostMeta>

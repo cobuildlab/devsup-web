@@ -1,18 +1,15 @@
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
-import NewsletterBG from '../../images/newsletter-bg.png';
 
 export const NewsletterWrapper = styled.div`
   margin: 0 auto;
   padding: 30px;
-  background-color: #f3f3f3;
-  background-image: url(${NewsletterBG});
+  background-color: ${themeGet('colors.secondary', '#292929')};
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 3px;
-  margin-top: 120px;
-
+  padding-top: 120px;
   @media (max-width: 990px) {
     margin-top: 90px;
     padding: 25px;
@@ -136,7 +133,7 @@ export const SuccessMessage = styled.div`
   line-height: 1.7;
   text-align: center;
   width: 100%;
-
+  color: ${themeGet('colors.textColor', '#292929')};
   @media (max-width: 990px) {
     font-size: 18px;
   }

@@ -127,6 +127,7 @@ const InputWrapper = styled.div`
       position: absolute;
       left: 15px;
       color: ${themeGet('colors.inactiveColor', '#767676')};
+      font-family: ${themeGet('fontFamily.0')};
       font-weight: 400;
       top: 3px;
       transition: all 0.2s ease;
