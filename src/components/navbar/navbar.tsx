@@ -21,7 +21,7 @@ type NavbarProps = {
 };
 
 const MenuItems = [
-  {
+  /* {
     label: 'Home',
     url: '/',
   },
@@ -33,7 +33,7 @@ const MenuItems = [
     label: 'Contact',
     url: '/contact',
   },
-  /* {
+  {
     label: '404 Page',
     url: '/404',
   }, */
@@ -67,22 +67,22 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({
     <HeaderWrapper className={addAllClasses.join(' ')} {...props}>
       <NavbarWrapper className="navbar">
         <DrawerProvider>
-          <MobileMenu items={MenuItems} logo={LogoImage} />
+          {/* <MobileMenu items={MenuItems} logo={LogoImage} />*/}
         </DrawerProvider>
         <Logo>
           <Link to="/">
-            <img src={LogoImage} alt="logo" />
+            <span>DEVSUP</span>
           </Link>
         </Logo>
         <MenuWrapper>
-          <Menu items={MenuItems} />
+         {/* <Menu items={MenuItems} /> */}
         </MenuWrapper>
         <NavSearchButton
           type="button"
           aria-label="search"
           onClick={toggleHandle}
         >
-          <IoIosSearch size="23px" />
+          <IoIosSearch size="23px" color="#fff"/>
         </NavSearchButton>
       </NavbarWrapper>
 

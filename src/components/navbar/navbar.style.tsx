@@ -11,9 +11,8 @@ export const NavbarWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid ${themeGet('borderColor', '#DBDBDB')};
+  background-color: ${themeGet('colors.secondary', '#DBDBDB')};
   padding: 30px 75px;
-  background-color: #fff;
   transition: 0.25s ease-in-out;
   @media (max-width: 1400px) {
     padding: 25px 45px;
@@ -35,10 +34,11 @@ export const Logo = styled.div`
   @media (max-width: 575px) {
     max-width: 90px;
   }
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  span{
+    color: #fff;
+    font-family: ${themeGet('fontFamily.0')};
+    font-size: 18px;
+    font-weight: bold;
   }
 `;
 
@@ -66,15 +66,15 @@ export const MenuItem = styled.li`
     line-height: ${themeGet('lineHeights.normal', '1')};
     font-weight: ${themeGet('fontWeights.3', '400')};
     font-family: ${themeGet('fontFamily.0')};
-    color: ${themeGet('colors.lightTextColor', '#757575')};
+    color: ${themeGet('colors.textColor', '#292929')};
     transition: 0.15s ease-in-out;
-
     &:hover {
-      color: ${themeGet('colors.textColor', '#292929')};
+      color: ${themeGet('colors.textColorHover', '#292929')};
     }
     &.active-link {
-      color: ${themeGet('colors.textColor', '#292929')};
+      color: #${themeGet('colors.textColor', '#292929')};
       font-weight: ${themeGet('fontWeights.4', '500')};
+      border-bottom: 1px solid ${themeGet('colors.textColor', '#292929')};
     }
   }
 `;

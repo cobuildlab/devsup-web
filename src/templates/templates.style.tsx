@@ -44,7 +44,7 @@ export const BlogPostsWrapper = styled.div`
 `;
 
 export const RelatedPostWrapper = styled.div`
-  margin: 0 auto;
+  margin: 120px auto;
   @media (min-width: 990px) {
     width: 900px;
   }
@@ -63,7 +63,7 @@ export const RelatedPostWrapper = styled.div`
 `;
 
 export const RelatedPostTitle = styled.h2`
-  color: ${themeGet('colors.textColor', '#292929')};
+  color: ${themeGet('colors.secondary', '#292929')};
   font-size: 16px;
   font-weight: 500;
   font-family: ${themeGet('fontFamily.0', "'Fira Sans',sans-serif")};

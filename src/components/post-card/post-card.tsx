@@ -23,6 +23,7 @@ interface PostCardProps {
   className?: string;
   imageType?: 'fixed' | 'fluid';
   placeholderBG?: string;
+  isTextColor?: string | undefined | null
 }
 
 const PostCard: React.FunctionComponent<PostCardProps> = ({
@@ -35,6 +36,7 @@ const PostCard: React.FunctionComponent<PostCardProps> = ({
   className,
   imageType,
   placeholderBG,
+  isTextColor,
   ...props
 }) => {
   // Add all classs to an array
@@ -78,7 +80,7 @@ const PostCard: React.FunctionComponent<PostCardProps> = ({
         )}
 
         <PostContent className="post_content">
-          <PostTitle className="post_title">
+          <PostTitle isColor={isTextColor} className="post_title">
             <Link to={url}>{title}</Link>
           </PostTitle>
           {description && (

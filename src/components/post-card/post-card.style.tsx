@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
+interface PropsTitle {
+  isColor?: string | undefined | null
+}
+
+
 export const PostCardWrapper = styled.div`
   position: relative;
 `;
@@ -63,14 +68,14 @@ export const PostContent = styled.div`
   align-self: center;
 `;
 
-export const PostTitle = styled.h2`
+export const PostTitle = styled.h2<PropsTitle>`
   font-size: 30px;
   font-weight: 700;
-  color: ${themeGet('colors.textColor', '#292929')};
   line-height: 1.53;
+  color: ${({ isColor }) => isColor? themeGet('colors.textColor', '#292929') : themeGet('colors.secondary', '#292929') };
   margin-bottom: 10px;
   a {
-    color: ${themeGet('colors.textColor', '#292929')};
+    color: ${({ isColor }) => isColor? themeGet('colors.textColor', '#292929') : themeGet('colors.secondary', '#292929') };
   }
   @media (max-width: 1200px) {
     font-size: 26px;

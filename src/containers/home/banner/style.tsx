@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
 import BannerBG from '../../../images/banner-bg.jpg';
+import { themeGet } from '@styled-system/theme-get';
 
 export const BannerWrapper = styled.div`
   position: relative;
@@ -54,7 +54,7 @@ export const BannerInner = styled.div`
 export const FeaturePosts = styled.div`
   width: 460px;
   max-width: 100%;
-  background-color: #fff;
+  background-color: ${themeGet('colors.secondary', '#292929')};
   border-radius: 6px;
   padding: 45px;
   @media (max-width: 990px) {
