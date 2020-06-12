@@ -69,7 +69,7 @@ const View3 = ()=> {
 * More than style there is no real gain on do module exporting.
 
 
-# 2) File Structure
+# **2) File Structure**
 
 Organizing files are one of the most important conventions, especially for large codebases and large teams, specially remote teams.
 
@@ -178,7 +178,7 @@ As of these conventions the project should only have one `index.css` file, that 
 Component specific styles should be handled using [Styled Components]([https://www.styled-components.com/](https://www.styled-components.com/))
 
 
-# 3) Formatting and Linting:
+# 3) **Formatting and Linting:**
 
 We use one of the most populars libraries for javascript linting [eslint](https://eslint.org/), along with (prettier)[https://prettier.io/] for code formatting.
 
@@ -218,7 +218,7 @@ npm i --save-dev eslint-config-prettier husky lint-staged prettier
 
 ## 4) Run `npm i` 
 
-# 4) Naming Conventions
+# 4) **Naming Conventions**
 
 Naming is important for quickly understand the purpose of an element: Classes, constants, variables or methods.
 
@@ -289,3 +289,65 @@ Example: `_extractKeys`, `_compute`
 - Event names literals and functions callbacks to events must be named on camelCase prefixed by the word `on`
 
 Example: `onClick`, `onLoad`, `onListMembers`
+
+
+# 4) **JS Docs**
+
+Good documentation should be part of every source code for make it easy to use, to debug and understand. 
+
+Properly document your functions and classes following these rules:
+
+- Use `JSDOC` to annotate comments in your source code. 
+- Provide a clear explanation of what the function or class does, and it's intentions:
+
+*PREFER THIS:*
+
+```typescript
+/**
+*  Signs Up the user in the platform. Generates a token for the user an creates a record on the Session Table.
+*/
+const signup = () => {
+
+}
+```
+
+*AND NOT THIS:*
+
+```typescript
+/**
+*  Signs Up the user.
+*/
+const signup = () => {
+
+}
+```
+
+- Provide documentation for parameters: name, type and description. 
+- Provide notices of `@deprecated` indicating the reason of deprecation and the replacement mechanism.
+- Document exceptions with `@throw` indicating the type of Exception and under which conditions is/are raised.
+- Provide additional information for side effects like mutation of the data, use of globals, etc.
+
+### Example:
+
+```typescript
+/**
+*  Signs Up the user in the platform. Generates a token for the user an creates a record on the Session Table.
+*  @deprecated since version 2.0. Use `signupWithAuth0` instead.
+*
+*  @param username{string} - The username of the user to sign in.
+*  @param password{string} - The password of the user to sign in. The password will be validated.
+*  @returns {User} - The user created in the operation with the full data from the database.
+*  @throws {ValidationError} - If the username or password are invalid.
+*  @throws {IntegrityError} - If the username is already used.
+*/
+const signup = (username: string, password: string): User => {
+
+}
+```
+
+
+### Justification
+
+- Clear documentation helps other developers to quickly understand the purpose of a function, class or sentence.
+- Clear documentation helps maintain and reuse the functions and classes.
+- Clear documentation helps identify bugs easier. 
