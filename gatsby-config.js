@@ -1,6 +1,6 @@
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
 
 module.exports = {
   siteMetadata: {
@@ -36,6 +36,7 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          `gatsby-remark-autolink-headers`,
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -130,4 +131,4 @@ module.exports = {
       },
     }, */
   ],
-};
+}
