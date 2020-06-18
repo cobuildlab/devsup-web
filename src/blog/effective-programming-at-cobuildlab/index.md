@@ -11,13 +11,13 @@ This set of practices are heavily based on these books:
 
 For Java:
 
-|  ![Effective Java 1](media/effective-java-1.png) | [Effective Java](https://www.amazon.com/gp/product/0134685997/ref=as_li_tl?ie=UTF8&tag=gurupia-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0134685997&linkId=4e66ae1154a5d6dab6b03394fcfee40b)|
+|  ![Effective Java 1](effective-java-1.png) | [Effective Java](https://www.amazon.com/gp/product/0134685997/ref=as_li_tl?ie=UTF8&tag=gurupia-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0134685997&linkId=4e66ae1154a5d6dab6b03394fcfee40b)|
 |---|---|
-|  ![Effective Java 2](media/effective-java-2.png) | [Effective Java 2](https://www.amazon.com/gp/product/B078H61SCH/ref=as_li_tl?ie=UTF8&tag=gurupia-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B078H61SCH&linkId=b950edc2c1bec33e7e14acd66e569504)|
+|  ![Effective Java 2](effective-java-2.png) | [Effective Java 2](https://www.amazon.com/gp/product/B078H61SCH/ref=as_li_tl?ie=UTF8&tag=gurupia-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B078H61SCH&linkId=b950edc2c1bec33e7e14acd66e569504)|
 
 For Python:
 
-|  ![Effective Python 1](media/effective-python.jpeg) | [Effective Python](https://www.amazon.com/gp/product/0134853989/ref=as_li_tl?ie=UTF8&tag=gurupia-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0134853989&linkId=2c2867868bcdab4bb2ee21b4cdd6b133)|
+|  ![Effective Python 1](effective-python.jpeg) | [Effective Python](https://www.amazon.com/gp/product/0134853989/ref=as_li_tl?ie=UTF8&tag=gurupia-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0134853989&linkId=2c2867868bcdab4bb2ee21b4cdd6b133)|
 |---|---|
 
 This document aims to reduce the friction between patterns, conventions and best practices to right `effective code`. (See below)
@@ -188,3 +188,20 @@ const TableView = ({children, loading}) => {
 - Allows the user of the function what to do on each scenario.
 - Avoids confusion comparing return values.
 
+
+# 2. Code Review:
+
+Code Review should be a practice used by all development teams as is probed technique that, done right improves the **effectiveness** of any code base.
+
+In Cobuild Lab, we use this technique as a mandatory step before merging any feature into a collaboration branch. 
+
+Code reviews in Cobuild Lab is being based mainly in the process used by Google Engineers and posted on [Github](https://google.github.com) and the [Git Feature Branch Flow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) proposed by [Atlassian]:
+
+- [Git Feature Branch Flow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
+- [The Standard of Code Review](https://google.github.io/eng-practices/review/reviewer/standard.html)
+- [What to look for in a code review](https://google.github.io/eng-practices/review/reviewer/looking-for.html)
+- [Navigating a CL in review](https://google.github.io/eng-practices/review/reviewer/navigate.html)
+ 
+Here, we present a brief summary of the aspects of a good process of Code Review:
+
+    
