@@ -1,5 +1,5 @@
 ---
-title: "Conventions to create a React or React Native Application"
+title: "Conventions for creating a React or React Native Application"
 date: 2021-12-31T01:00:00+00:00
 tags: ["React", "React Native", "Conventions", "Application"]
 cover: "../../assets/default-blog/default-post.jpg"

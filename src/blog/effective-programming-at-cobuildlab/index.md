@@ -1,5 +1,5 @@
 ---
-title: "Effective Programming: A guide to conventions and best practices for software development"
+title: "Effective Programming: A guide for conventions and best practices in software development"
 date: 2021-12-31T01:00:00+00:00
 tags: ["Effective Programming", "Conventions", "software development"]
 cover: "../../assets/default-blog/default-post.jpg"
