@@ -2,15 +2,13 @@
 title: "Git branches strategy for environments deployment on web applications"
 date: '2020-06-28'
 tags: ["architecture", "git", "development", "devops"]
-cover: "../../assets/default-blog/default-post.jpg"
+cover: "./git-branches-environment.png"
 ---
 
 Here we show a proposed approach for managing deployment environments using Git branches, and how the flow of the code for these branches should flow and be conditioned.
 
 This diagram is being base on our experience developing web applications, and the [Feature Branch](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) Approach proposed by Atlassian. 
  
-
-![Git Branches Environment](./git-branches-environment.png)
 
 # General considerations:
 
