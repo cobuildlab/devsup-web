@@ -241,7 +241,7 @@ React components can be clasified in 2 major groups depending on how they fit in
 ## **6) Architecture**
 React applications must rely on the [Flux]([https://facebook.github.io/flux/](https://facebook.github.io/flux/)) Architecture propose by Facebook.
 
-The main rules are:
+### General Rules
 1) Unidirectional flow always: View -> Actions -> Dispatcher -> Store -> View
 2) The Application State can be divided in separated stores
 3) **Presentational Components** subscribes to changes in any application level state or **store**
@@ -249,11 +249,33 @@ The main rules are:
 5) **Presentational components** can trigger **actions** that affect the state of the **store**
 6) **Actions** can be combined in to more complex **actions**
 7) **Stores** propagates changes to all subscribers
-8) Any part of the application can have read only access to the application current state or **store**
+8) Any part of the application can have read only access to the application level current state or **stores**
 9) Possible events or changes on the application must be declared either on a declarative or programmatically way
 10) Consistency checks must always throw errors: a) A view can't subscribe to an event or change that doesnt exist, b) An action can never dispatch an event or change that doesn' exists c) A store can't handle data of an event or change that doesn't exist
 
-Any library that can comply with this rules is a good fit to handle the Architecture. For convenience, a state library has been created with this set of rules in mind: [Flux State]([https://github.com/cobuildlab/flux-state](https://github.com/cobuildlab/flux-state)) with a convenient React Wrapper: [React Flux State]([https://github.com/cobuildlab/react-flux-state](https://github.com/cobuildlab/react-flux-state))
+> Any library that can comply with these rules is a good fit to handle the Architecture. For convenience, a state library has been created with this set of rules in mind: [Flux State]([https://github.com/cobuildlab/flux-state](https://github.com/cobuildlab/flux-state)) with a convenient React Wrapper: [React Flux State]([https://github.com/cobuildlab/react-flux-state](https://github.com/cobuildlab/react-flux-state))
+ 
+### **View** Rules:
+
+### **Store** Rules:
+
+### **Actions** Rules:
+It logically represents a business activity with a specified outcome.
+
+1) It's self-contained: validation, permissions, service
+It's a black box for its consumers.
+2) Business Logic
+3) Composable: It may consist of other underlying services.
+4) Pure
+5) Permission Exception
+6) No communication con state management o storesbrew
+client as parameters
+
+### **Permission** Rules:
+
+### **Validation** Rules
+
+
 
 ## **7) Formatting and Linting:**
 
