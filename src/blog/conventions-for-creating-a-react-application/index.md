@@ -1,7 +1,7 @@
 ---
 title: "Conventions for creating a React or React Native Application"
 date: 2021-12-31T01:00:00+00:00
-tags: ["React", "React Native", "Conventions", "Application"]
+tags: ["React", "React Native", "Conventions", "Typescript"]
 cover: "../../assets/default-blog/default-post.jpg"
 ---
 
@@ -225,10 +225,10 @@ const View = () => {
 
 Reference: [React Patterns Presentational and Container Components]([https://cobuildlab.com/development-blog/react-patterns-container-and-presentational-components/](https://cobuildlab.com/development-blog/react-patterns-container-and-presentational-components/))
 
-React components can be clasified in 2 major groups depending on how they fit in the Architecture of your application, and how they interact with the App and the User:
+React components can be classified in 2 major groups depending on how they fit in the Architecture of your application, and how they interact with the App and the User:
 
 1) **Presentational Components** or just Components are responsible present or render the user interface, they interface the communication between the User and the Application State only through the **Container Components**.
-2) **Container Componets** or Views are responsible of "connecting" the application state with the User Interface by listening to changes to the Application State and rendering **Presentational Components**. The way they interact with the Application State or stores depends of the technology used (Redux, Flux, MobX, Context API)
+2) **Container Components** or Views are responsible for "connecting" the application state with the User Interface by listening to changes to the Application State and rendering **Presentational Components**. The way they interact with the Application State or stores depends of the technology used (Redux, Flux, MobX, Context API)
 
 
 | Feature |   Presentational Components (Components) |  Container Components (Views) |
@@ -241,40 +241,54 @@ React components can be clasified in 2 major groups depending on how they fit in
 ## **6) Architecture**
 React applications must rely on the [Flux]([https://facebook.github.io/flux/](https://facebook.github.io/flux/)) Architecture propose by Facebook.
 
+![React Architecture](./react-architecture.png)
+
 ### General Rules
 1) Unidirectional flow always: View -> Actions -> Dispatcher -> Store -> View
-2) The Application State can be divided in separated stores
-3) **Presentational Components** subscribes to changes in any application level state or **store**
-4) **Actions** can dispatch events that modify the state of the **store**
-5) **Presentational components** can trigger **actions** that affect the state of the **store**
-6) **Actions** can be combined in to more complex **actions**
-7) **Stores** propagates changes to all subscribers
-8) Any part of the application can have read only access to the application level current state or **stores**
-9) Possible events or changes on the application must be declared either on a declarative or programmatically way
-10) Consistency checks must always throw errors: a) A view can't subscribe to an event or change that doesnt exist, b) An action can never dispatch an event or change that doesn' exists c) A store can't handle data of an event or change that doesn't exist
+2) **Presentational Components** subscribes to changes in any application level state or **store**
+3) **Actions** can dispatch events that modify the state of the **store**
+4) **Presentational components** can trigger **actions** that affect the state of the **store**
+5) **Actions** can be combined in to more complex **actions**
+6) **Stores** propagates changes to all subscribers
+7) Consistency checks must always throw errors: 
+    - A view can't subscribe to an event or change that doesn't exist. 
+    - An action can never dispatch an event or change that doesn't exist. 
+    - A store can't handle data of an event or change that doesn't exist.
 
-> Any library that can comply with these rules is a good fit to handle the Architecture. For convenience, a state library has been created with this set of rules in mind: [Flux State]([https://github.com/cobuildlab/flux-state](https://github.com/cobuildlab/flux-state)) with a convenient React Wrapper: [React Flux State]([https://github.com/cobuildlab/react-flux-state](https://github.com/cobuildlab/react-flux-state))
+> Any library that can comply with these rules is a good fit to handle the Architecture. 
+> For convenience, a state library has been created with this set of rules in mind: [React Simple State]([https://github.com/cobuildlab/react-simple-state](https://github.com/cobuildlab/react-simple-state))
  
 ### **View** Rules:
+1) All the rules described in this document.
+2) A view can check permissions (see number **9**)
+3) A view can check validations (see number **10**)
+4) A view can only be updated as a result of a state change.
+5) A view can't handle promises lifecycles rather it must rely on notifications and subscriptions to "react" to events.  
 
 ### **Store** Rules:
+1) A store is defined by one or more logically grouped events.
+2) Events can be grouped in a module or in a event-like (stateful and subscriptable) store.
+3) Every possible event in the application must be declared either on a declarative or programmatically way.  
+4) An application must have logically separated stores.
+5) The store state can only be modified via `dispatch` of events.
+4) Any part of the application can have read only access to the application level current state or **stores**
 
 ### **Actions** Rules:
-It logically represents a business activity with a specified outcome.
-
-1) It's self-contained: validation, permissions, service
-It's a black box for its consumers.
-2) Business Logic
-3) Composable: It may consist of other underlying services.
-4) Pure
-5) Permission Exception
-6) No communication con state management o storesbrew
-client as parameters
+1) An action has to logically represent a business activity with a specified outcome.
+2) It's self-contained: validation, permissions, services.
+3) It's a black box for its consumers.
+4) Composable: It may consist of other underlying services.
+5) Pure: Other than the application state via `dispatch`, the action can't access or modify external state. 
 
 ### **Permission** Rules:
+1) A Permission must be pure javascript function.
+2) Permissions can be composables and combinables.
+3) See number **9**
 
 ### **Validation** Rules
-
+1) A Validation must be pure javascript function.
+2) Validations can be composables and combinables.
+3) See number **10**
 
 
 ## **7) Formatting and Linting:**
@@ -397,9 +411,9 @@ sddsf}
 * In React the Session component can be used for [Error Boundaries](https://reactjs.org/docs/error-boundaries.html). 
 
 
-## **9) Use shared permission functions to control access to features and business operations:**
+## **9) Use shared `Permission` functions to control access to features and business operations:**
 
-- Isolate permission logic in functions that are easy to share.
+- Isolate permission logic in functions that are easy to and share.
 - A permission function should only depend dynamically on Business Objects.
 - All permission functions should maintain the same signature:
 
@@ -448,3 +462,38 @@ export const canDeleteAllianceV2 = (user: User, alliance: Alliance): [boolean, s
   }
 };
 ```
+
+## **9) Use shared `Validation` functions to control data integrity and consistency:**
+
+- Isolate validation logic in functions that are easy to share and reuse.
+- A validation function should only depend dynamically on Business Objects.
+- A validation must response to invalid scenarios with Exceptions with enough information to all the invalid scenarios.
+- All validations functions should maintain the same signature:
+
+```typescript
+/**
+ * Validator to check If a Project can be created.
+ * @param {User}user - The User creating the project.
+ * @param {Project}project - The Project to be created.
+ * @throws {ValidationError} - If one or more constraints are not met.
+ */
+export const validateProject = (user:User, project:Project): void  => {
+  const errors = [];
+
+  if(project.name === ""){
+    errors.push(["name", "Missing required name"]);      
+  }
+
+  if(user.role === EMPLOYEE && user.age < 45)
+    errors.push(["role", "Invalid role for user"]);
+
+  if(errors.length > 0)
+    throw new ValidationError(errors);
+}; 
+```
+
+
+TODO:  
+- update lint config
+- update jsdocs
+- create logging rules
