@@ -3,6 +3,7 @@ const colors = {
   black: '#292929', // 1
   white: '#ffffff', // 2
   textColor: '#fff', // 3
+  secondaryTextColor: "#2B2C3A",
   lightTextColor: '#757575', // 4
   inactiveField: '#F7F7F7', // 5
   inactiveColor: '#767676', // 6

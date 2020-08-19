@@ -16,7 +16,7 @@ export const SearchForm = styled.form`
     width: 100%;
     font-size: 21px;
     font-weight: normal;
-    color: ${themeGet('colors.textColor', '#292929')};
+    color: ${themeGet('colors.secondaryTextColor', '#292929')};
     border: 0;
     background: transparent;
     &:focus {

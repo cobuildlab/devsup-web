@@ -35,11 +35,11 @@ export const PostDetails = styled.div`
 export const PostTitle = styled.h1`
   font-size: 21px;
   font-weight: 700;
-  color: ${themeGet('colors.textColor', '#292929')};
+  color: ${themeGet('colors.secondaryTextColor', '#292929')};
   line-height: 1.53;
   margin-bottom: 12px;
   a {
-    color: ${themeGet('colors.textColor', '#292929')};
+    color: ${themeGet('colors.secondaryTextColor', '#292929')};
   }
   @media (max-width: 990px) {
     font-size: 16px;
