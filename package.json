@@ -52,7 +52,7 @@
     "typeface-montserrat": "0.0.75",
     "typography": "^0.16.19",
     "url-join": "^4.0.1",
-    "yup": "^0.28.3"
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^16.13.0",
